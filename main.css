@@ -1,0 +1,28 @@
+
+h1 {
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+p {
+    color: crimson
+}
+
+body {
+    background: white;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    color:aqua;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 800px;
+    <!--
+    상 좌 아 우-->
+    padding: 30em 10em 50em 100em;
+    
+}
+
+html {
+    background: black;
+}

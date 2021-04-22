@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> DATA TYPE</title>
+
+    </head>
+    <body>
+    
+       <button> PRESS PLEASE</button>
+        <!--
+    var는 function-scoped이고, let, const는 block-scoped입니다.
+    let은 변수에 재할당이 가능하지만,
+    const는 변수 재선언, 재할당 모두 불가능하다.
+
+
+
+    변수 선언에는 기본적으로 const를 사용하고, 재할당이 필요한 경우에 한정해 let 을 사용하는 것이 좋다.
+
+    그리고 객체를 재할당하는 경우는 생각보다 흔하지 않다. const 를 사용하면 의도치 않은 재할당을 방지해 주기 때문에 보다 안전하다.
+
+    재할당이 필요한 경우에 한정해 let 을 사용한다. 이때, 변수의 스코프는 최대한 좁게 만든다.
+
+    재할당이 필요 없는 상수와 객체에는 const 를 사용한다.
+
+
+    -->
+        
+        
+        
+        <script>
+//        // var는 function-scope이기 때문에 for문이 끝난다음에 i를 호출하면 값이 출력이 잘 된다.
+//        // 이건 var가 hoisting이 되었기 때문이다.
+//        for(var j=0; j<10; j++) {
+//          console.log('j', j)
+//        }
+//        console.log('after loop j is ', j) // after loop j is 10
+//
+//
+//        // 아래의 경우에는 에러가 발생한다.
+//            var i //<< 이렇게 밖에 내보내야지 오류가 안나는데 굉장히 이상한 방식
+//        function counter () {
+//          for(i=0; i<10; i++) {
+//            console.log('i', i)
+//          }
+//        }
+//        counter()
+//        console.log('after loop i is', i) // ReferenceError: i is not defined
+//            
+//           
+            
+            let name = 'HIJAVA';
+            console.log(name);
+            //이렇게 재할당은 불가능하다
+//            let name = 'STILL HI?';
+//            console.log(name);
+//          이렇게 파이썬이나 다른 언어처럼 값할당가능
+            name = 'Hello?';
+            console.log(name);
+            
+            const Final = 'Const seems Final'
+            console.log(Final)
+            
+//            
+//            but What is HOISTING
+//            
+//            호이스팅(Hoisting)이란, var 선언문이나 function 선언문 등을 해당 스코프의 선두로 옮긴 것처럼 동작하는 특성을 말한다.
+//            
+//            하지만, var 로 선언된 변수와는 달리 let 로 선언된 변수를 선언문 이전에 참조하면 참조 에러(ReferenceError)가 발생한다.
+
+                console.log(foo); // undefined
+                var foo;
+                //var 으로 선언된 변수는 선언 단계와 초기화 단계가 한번에 이루어진다. 하지만,
+            
+//                  !!
+//                console.log(foo); // undefined
+//
+//                var foo;
+//                console.log(foo); // undefined
+//
+//                foo = 1; // 할당문에서 할당 단계가 실행된다.
+//                console.log(foo); // 1
+            
+//                하지만 let은?
+
+        // 스코프의 선두에서 선언 단계가 실행된다.
+        // 아직 변수가 초기화(메모리 공간 확보와 undefined로 초기화)되지 않았다.
+        // 따라서 변수 선언문 이전에 변수를 참조할 수 없다.
+//
+//        console.log(foo); // ReferenceError: foo is not defined
+//
+//        let foo; // 변수 선언문에서 초기화 단계가 실행된다.
+//        console.log(foo); // undefined
+//
+//        foo = 1; // 할당문에서 할당 단계가 실행된다.
+//        console.log(foo); // 
+//                console.log(bar); // Error: Uncaught ReferenceError: bar is not defined
+//                let bar;
+
+        </script>
+    </body>
+</html>

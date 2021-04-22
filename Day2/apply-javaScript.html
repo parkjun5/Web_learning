@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Apply JavaScript example</title>
+  </head>
+  <body>
+    <button>Click me</button>
+    <button>Click me</button>
+      
+      
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+//          DOM Tree가 다 만들어진 후에 DOM API를 이용하여 DOM에 접근할 수 있기 때문에,
+//          보통 자바스크립트 코드는 DOMContentLoaded 이후에 동작하도록 구현한다.
+//           이 방법이 로딩 속도 성능에 유리하다고 생각하기 때문이다.
+//           페이지 로딩이 끝나면 이 function을 사용한다.
+            
+        function createParagraph() {
+            let para = document.createElement('p');
+            para.textContent = 'You clicked the button!';
+            document.body.appendChild(para);
+            }
+//        const para = document.querySelector('button');   
+//            이거는 한개의 버튼만가능
+//        para.addEventListener('click', createParagraph);
+        const buttons = document.querySelectorAll('button');
+        for(let i = 0; i < buttons.length ; i++) {
+        buttons[i].addEventListener('click', createParagraph);
+        }
+//            이건 여러개의 버튼이 있어도 전부 이벤트를 넣어준다.
+            });
+      
+      </script>
+  </body>
+</html>

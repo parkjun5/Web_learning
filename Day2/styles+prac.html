@@ -7,11 +7,11 @@
     </head>
     <body>
     
-        <p>Player 1: Chris</p>
+        <p class= "player">Player 1: Chris</p>
         
         <script>
-            const para = document.querySelector('p');
-
+            const para = document.querySelector('.player');
+            console.log(para)
             para.addEventListener('click', updateName);
 
             function updateName() {

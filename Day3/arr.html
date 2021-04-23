@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>WE ARE GO TO ARR</title>
+
+  </head>
+  <body >
+      
+      <ul class="output">
+      
+      </ul>
+      <p class = "output">
+      
+      </p>
+      
+      <script>
+//        var myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
+//        var lists = myData.split(",");
+//        console.log(lists);
+//        var mataSTRING = lists.join(',');
+//        console.log(mataSTRING);
+//        // 여기서도 새로운 값 push 로 넣는다!
+//          
+//        lists.push("HI!");
+//          
+//        console.log(lists);
+//        lists.push('Bradford', 'Brighton');  
+//          console.log(lists);
+//        var newLIST  = lists.push("BYE!");
+//        //이러면 길이가 배열되네?
+//        console.log(newLIST);
+//        var list2 = [1,2,3];
+//        var FIRST = list2.shift();
+//        console.log(FIRST , list2);
+//        list2.unshift(111);
+//        // unSHIFT 는 제일 앞에 추가되는겄!
+//        console.log(list2);
+//          
+
+          var list = document.querySelector('ul.output');
+            var totalBox = document.querySelector('p.output');
+            var total = 0;
+            list.innerHTML = '';
+            totalBox.textContent = '';
+            let products = ['Underpants:6.99',
+                            'Socks:5.99',
+                            'T-shirt:14.99',
+                            'Trousers:31.99',
+                            'Shoes:23.99'];
+
+            for (var i = 0; i < products.length; i++) { // number 2
+                let product = products[i].slice(0, products[i].indexOf(':')-1);
+                let price = products[i].slice(products[i].indexOf(':')+1);
+                total += price *1;
+                
+  
+              itemText = product + "—" + price;
+
+              var listItem = document.createElement('li');
+              listItem.textContent = itemText;
+              list.appendChild(listItem);
+            }
+
+            totalBox.textContent = 'Total: $' + total.toFixed(2);
+          // to.Fiexed(3) 
+          // 소수점 3자리까지 만들어주기
+
+          
+          
+          
+      </script>
+   
+  </body>
+</html>

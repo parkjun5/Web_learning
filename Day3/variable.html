@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--한글 주석 깨지이 않기 위함? 한글 잘나오기 위해서-->
+        <title>
+            variable TEST
+        </title>
+    
+    </head>
+    <body>
+    
+        <button>PRESS ME</button>
+    
+        <canvas id="canvas"></canvas>
+        
+        <canvas id="stockGraph" width="150" height="150">
+          current stock price: $3.15 +0.15
+        </canvas>
+
+        <canvas id = 'catCanvas' width=" 150" height = "150">
+            <img src = "images/cat.jpg" width="150" height = "150">
+        </canvas>
+        
+        
+        <script>
+            const button = document.querySelector('button');
+            
+            button.onclick = function(){
+                
+                let name = prompt('WHAT IS YOUR NAME?');
+                console.log('HI '+ name +', nice to see you!');
+                
+            // 자바스크립트에서 객체는 {} 를 사용하여 표기 배열 []
+                //ex)
+                const Oriented = {name : 'OOP', feature : 'A lot'};
+                const arr = [1,5,6,5,6];
+                const arr2 = [[1,2], [3,4] , [5,6]];
+                
+                console.log(Oriented);
+                console.log(arr, arr2)
+                console.log(Oriented.name)
+                console.log(typeof(Oriented))
+                // result === object
+                
+            }        
+            const canvas = document.getElementById('canvas');
+            const canvas2 = document.getElementById('stockGraph');
+            const canvas3 = document.getElementById('catCanvas');
+            const ctx = canvas.getContext('2d');
+            const ctx2 = canvas2.getContext('2d');
+            const ctx3 = canvas3.getContext('2d');
+            ctx2.fillRect(150,150,300,300);
+            ctx3.fillRect(300,300,450,450);
+            let x = 50;
+            let y = 50;
+            
+            
+            ctx.fillStyle ='green';
+            ctx.fillRect(10,10,x,y);
+        </script>
+    </body>
+
+
+</html>

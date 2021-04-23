@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title> STRINGS TEST</title>
+
+  </head>
+  <body >
+      <ul class = "output"></ul>
+      
+          <script type="text/javascript">
+    
+//             //example 1 >> 크리스마스 관련된것만 찾기
+//            var list = document.querySelector('ul.output');
+//              
+//              
+//              //ul  중 class output
+//            console.log(list);
+//            list.innerHTML = '';
+//            var greetings = ['Happy Birthday!',
+//                             'Merry Christmas my love',
+//                             'A happy Christmas to all the family',
+//                             'You\'re all I want for Christmas',
+//                             // \' 으로 ""사용한해도 ' 사용가능
+//                             'Get well soon'];
+//
+//            for (var i = 0; i < greetings.length; i++) {
+//              var input = greetings[i];
+//              // Your conditional test needs to go inside the parentheses
+//              // in the line below, replacing what's currently there
+//              if (greetings[i].indexOf('Christmas') !== -1) {
+//                var result = input;
+//                var listItem = document.createElement('li');
+//                listItem.textContent = result;
+//                list.appendChild(listItem);
+//              }
+//                 }
+              // ex ) 대, 소문자 변환
+//              var list = document.querySelector('ul.output');
+//                list.innerHTML = '';
+//                var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+//                for(var i = 0; i < cities.length; i++) {
+//                  var firstOne = cities[i][0].toUpperCase();
+//                  var lastThing = cities[i].slice(1).toLowerCase();
+//                
+//                  // write your code just below here
+//
+//                  var result = firstOne+lastThing;
+//                  var listItem = document.createElement('li');
+//                  listItem.textContent = result;
+//                  list.appendChild(listItem);
+//                }
+
+
+              
+              var list = document.querySelector('.output ul');
+                list.innerHTML = '';
+                var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+                                'GNF576746573fhdg4737dh4;Greenfield',
+                                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                                'SYB4f65hf75f736463;Stalybridge',
+                                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+
+                for (var i = 0; i < stations.length; i++) {
+                  var input = stations[i];
+                  var lasts = input.slice(input.indexOf(';')+1);
+                    
+                    var first = "";
+                  for (var k = 0; k < input.length - lasts.length  ;k++){
+                      if (input[k].charCodeAt(0) < 65 || input[k].charCodeAt(0) > 122){ 
+                        first = input.slice(0, k);
+                          break;
+                  }
+                       }
+                  var result = first + ": "+ lasts;
+                  var listItem = document.createElement('li');
+                  listItem.textContent = result;
+                  list.appendChild(listItem);
+                }
+
+              
+              
+    </script>
+
+
+  </body>
+</html>

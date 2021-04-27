@@ -33,7 +33,8 @@ function result() {
     
   if(customName.value !== '') {
     let name = customName.value;
-    storyArr[storyArr.indexOf("Bob")] = name
+//    storyArr[storyArr.indexOf("Bob")] = name;
+      newStory.replace('Bob',name );
   }
     
   if(document.getElementById("uk").checked) {
